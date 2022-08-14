@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/keyFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/letterCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/KeyViewMinHeight"
+        app:cardCornerRadius="@dimen/keyViewCardCornerRadius"
+        app:cardElevation="0.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <TextView
+                android:id="@+id/letterTextView"
+                style="@style/KeyTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:text="A" />
+
+            <ImageView
+                android:id="@+id/keyImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:minWidth="20dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_baseline_backspace_24" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

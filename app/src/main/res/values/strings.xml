@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Naija Keyboard</string>
+    <string name="symbols">#sym</string>
+    <string name="emoji_image_description">Emoji</string>
+    <string name="input_method_preference">com.olalekan.videoapplication.INPUT_METHOD_PREFERENCE</string>
+    <string name="saved_input_preference">com.olalekan.videoapplication.SAVED_INPUT_PREFERENCE</string>
+    <string name="colour_preference">com.olalekan.videoapplication.COLOUR_PREFERENCE</string>
+    <string name="vibration_preference">com.olalekan.videoapplication.VIBRATION_PREFERENCE</string>
+    <string name="key_opacity_preference">com.olalekan.videoapplication.KEY_OPACITY_PREFERENCE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_snackbar_string">It might take a few minutes before the changes take effect</string>
+
+</resources>

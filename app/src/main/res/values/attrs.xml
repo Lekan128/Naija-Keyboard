@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BubbleView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="color" format="color"/>
+        <attr name="text" format="string"/>
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="KeyView">
+<!--        <attr name="keyHeight" format="dimension"/>-->
+        <attr name="showInEditable" format="boolean"/>
+        <attr name="letterColour" format="color"/>
+        <attr name="previewLetterColour" format="color"/>
+        <attr name="letterBackgroundColour" format="color"/>
+        <attr name="previewBackgroundColour" format="color"/>
+        <attr name="letter" format="string"/>
+        <attr name="image" format="reference"/>
+        <attr name="showImage" format="boolean"/>
+        <attr name="keyShouldRepeat" format="boolean"/>
+        <attr name="shouldShowPreview" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyKeyboardView">
+        <attr name="keyboardBackground" format="color"/>
+    </declare-styleable>
+
+<!--    <declare-styleable name="MyKeyboardView">-->
+<!--        <attr name="Key" format="enum">-->
+<!--            <enum-->
+<!--        </attr>-->
+<!--    </declare-styleable>-->
+</resources>

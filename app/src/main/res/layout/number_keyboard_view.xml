@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/letterKeyboardLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/number_keyboard_text_copied"
+        layout="@layout/single_suggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView1"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="1"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView2"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="2"
+            app:showInEditable="true"
+            app:shouldShowPreview="false"/>
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView3"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="3"
+            app:showInEditable="true"
+            app:shouldShowPreview="false"/>
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewDel"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            app:image="@drawable/ic_baseline_backspace_24"
+            app:keyShouldRepeat="true"
+            app:letter="Del"
+            app:showImage="true"
+            app:showInEditable="false" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView4"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="4"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView5"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="5"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView6"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="6"
+            app:shouldShowPreview="true"
+            app:showInEditable="true" />
+
+        <!--        todo-->
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewGo"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_baseline_navigate_next_24"
+            app:letter="Go"
+            app:showImage="true"
+            app:showInEditable="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView7"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="7"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView8"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="8"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView9"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="9"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewComma"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter=","
+            app:showInEditable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--todo-->
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewStar"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="*"
+            app:showInEditable="true" />
+
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyView0"
+            style="@style/KeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="0"
+            app:shouldShowPreview="false"
+            app:showInEditable="true" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewHash"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="#"
+            app:showInEditable="true" />
+
+        <!--        Todo-->
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewSymbols"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="*#N"
+            app:showInEditable="false" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewStop"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="."
+            app:showInEditable="true"
+            app:shouldShowPreview="false"/>
+
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewSpace"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:letter="Space"
+            app:shouldShowPreview="false"
+            app:showInEditable="false" />
+
+        <com.olalekan.naijakeyboard.KeyView
+            android:id="@+id/numKeyViewPlus"
+            style="@style/SpecialKeyViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letter="+"
+            app:showInEditable="true" />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+<!--<ImageView-->
+<!--    android:id="@+id/emojiImageView"-->
+<!--    android:layout_width="20dp"-->
+<!--    android:layout_height="20dp"-->
+<!--    android:layout_marginStart="16dp"-->
+<!--    android:background="@drawable/ic_baseline_insert_emoticon_24"-->
+<!--    android:foreground="@drawable/ic_baseline_insert_emoticon_24"-->
+<!--    app:layout_constraintBottom_toBottomOf="@+id/suggestionRecyclerView"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/suggestionRecyclerView"-->
+<!--    app:srcCompat="@drawable/ic_baseline_insert_emoticon_24" />-->
+
+<!--<androidx.recyclerview.widget.RecyclerView-->
+<!--    android:id="@+id/suggestionRecyclerView"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_gravity="center"-->
+<!--    android:layout_margin="@dimen/suggestion_layout_margin"-->
+<!--    android:layout_marginStart="16dp"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toEndOf="@+id/emojiImageView"-->
+<!--    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

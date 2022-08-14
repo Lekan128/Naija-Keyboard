@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/keyboard_background"
+    android:orientation="vertical">
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/suggestionRecyclerView3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="@dimen/suggestion_layout_margin" />-->
+
+    <com.olalekan.naijakeyboard.SymbolsKeyboardView
+        android:id="@+id/symbolsKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.olalekan.naijakeyboard.LetterKeybaordView
+        android:id="@+id/lettersKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.olalekan.naijakeyboard.EmojiKeybaordView
+        android:id="@+id/emojiKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.olalekan.naijakeyboard.NumberKeybardView
+        android:id="@+id/numberKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+<!--    <include-->
+<!--        android:id="@+id/symbolsKeyboard"-->
+<!--        layout="@layout/symbols_keyboard_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/lettersKeyboard"-->
+<!--        layout="@layout/letter_keyboard_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/emojiKeyboard"-->
+<!--        layout="@layout/emoji_keyboard_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/numberKeyboard"-->
+<!--        layout="@layout/number_keyboard_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone" />-->
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-night/rectangle_curved_corners.xml" value="0.1935" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/textview_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/view_with_corner_stoke.xml" value="0.159" />
+        <entry key="app/src/main/res/drawable/white_rectangle_curved_corners.xml" value="0.1635" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_setup.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/add_suggestion_edit_text_dialog.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/colour_view.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/fragment_preference_bottom_sheet_dialog.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/fragment_test_bottom_sheet_dialog.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/key_view.xml" value="0.2495274102079395" />
+        <entry key="app/src/main/res/layout/keyboard.xml" value="0.4278584798177084" />
+        <entry key="app/src/main/res/layout/letter_keyboard.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/letter_keyboard_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/multiple_emoji_options.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/multiple_key_preview.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/my_keyboard_view.xml" value="0.2759033203125" />
+        <entry key="app/src/main/res/layout/number_keyboard_view.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/single_colour_view.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/single_emoji.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/single_emoji_page.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/single_suggestion.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/single_suggestion_input.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/symbols_keyboard_view.xml" value="0.15070921985815602" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

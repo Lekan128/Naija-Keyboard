@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="KeyViewMinHeight">35dp</dimen>
+    <dimen name="suggestion_layout_margin">4dp</dimen>
+    <dimen name="minWidth">40dp</dimen>
+    <dimen name="keyViewCardCornerRadius">10dp</dimen>
+    <dimen name="emoji_view_pager_height">250dp</dimen>
+    <dimen name="viewCornerRadius">30dp</dimen>
+    <dimen name="emoji_size">25dp</dimen>
+
+</resources>
