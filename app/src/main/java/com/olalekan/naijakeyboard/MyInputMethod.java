@@ -359,7 +359,7 @@ public class MyInputMethod extends InputMethodService implements MyKeyboardView.
         int beforeLength = wordBeforeCursor.length();
         int afterLength = wordAfterCursor.length();
 
-        if(beforeLength>0){//word before the cursor is not empty
+        if(beforeLength>0){//word before the cursor is not empty, so null wount be returned
             //if the first character of the word be cleared starts with a capital letter
             //change the suggestion first letter to capital
             if(Character.isUpperCase(wordBeforeCursor.charAt(0))){
@@ -447,7 +447,7 @@ public class MyInputMethod extends InputMethodService implements MyKeyboardView.
         while (containLetters(test) && i == test.length()) {
 //            ++i;
             word = test;
-            test = getCurrentInputConnection().getTextBeforeCursor(++i, InputConnection.GET_TEXT_WITH_STYLES);
+            test = getCurrentInputConnection().getTextAfterCursor(++i, InputConnection.GET_TEXT_WITH_STYLES);
             if(i>= Constants.MAXIMUM_NUMBER_OF_LETTERS_TO_CHECK) return null;
         }
         return word.toString();

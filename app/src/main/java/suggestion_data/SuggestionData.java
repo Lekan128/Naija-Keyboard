@@ -16,15 +16,18 @@ import java.util.HashMap;
 import java.util.Locale;
 
 public class SuggestionData {
+    private static final int TIMES_WORD_SHOULD_BE_WRITTEN_BEFORE_SEEN_AS_CORRECT = 2;
+
     private SuggestionData(Context context){}
     private static SuggestionData mSuggestionData;
     private static Context mContext;
     private static InputStream mInputStream;
     private static HashMap<String, Integer> suggestionsHashMap;
+    public static HashMap<String, Integer> possibleSuggestionsToBeAddedHashMap = new HashMap<>();
     public static boolean suggestionsDoneLoading = false;
     private final static String ASSET_SORTED_FILE_NAME = "sorted.txt";
     private static final String INTERNAL_STORAGE_SUGGESTION_FILE_NAME = "suggestions";
-    private static final int NUMBER_OF_TIMES_TO_ADD_SUGGESTION = 2;
+    private static final int NUMBER_OF_TIMES_TO_ADD_SUGGESTION = 4;
 
 
     public static SuggestionData getInstance(Context context){
@@ -150,9 +153,23 @@ public class SuggestionData {
     }
 
     public static void addToSuggestions(String word, Context context){
-        Log.i("Suggestion Write", "Storage: " + word);
-        writeSuggestionToInternalStorage(word, NUMBER_OF_TIMES_TO_ADD_SUGGESTION, context);
-        WordPredictor.addToHashMap(word, suggestionsHashMap, NUMBER_OF_TIMES_TO_ADD_SUGGESTION);
+        //if the word has been typed TIMES_WORD_SHOULD_BE_WRITTEN_BEFORE_SEEN_AS_CORRECT times or more
+        // add it to suggestions database and suggestion hashmap
+        //if not add it to possible suggestions to be added hashmap
+        //This helps to make sure every mistake the user corrects is not added to the suggestion
+        if(possibleSuggestionsToBeAddedHashMap.containsKey(word)
+                && possibleSuggestionsToBeAddedHashMap.get(word)
+                >= TIMES_WORD_SHOULD_BE_WRITTEN_BEFORE_SEEN_AS_CORRECT){
+            Log.i("Suggestion Write", "Storage: " + word);
+
+            writeSuggestionToInternalStorage(word, NUMBER_OF_TIMES_TO_ADD_SUGGESTION, context);
+            WordPredictor.addToHashMap(word, suggestionsHashMap, NUMBER_OF_TIMES_TO_ADD_SUGGESTION);
+        }
+        else {
+            Log.i("Suggestion Write", "adding to possibleSuggestionsToBeAddedHashMap: " + word);
+            WordPredictor.addToHashMap(word, possibleSuggestionsToBeAddedHashMap);
+        }
+
     }
 
     private static String wordWithNewLine(String word){

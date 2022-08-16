@@ -11,7 +11,9 @@ import static com.olalekan.naijakeyboard.defaults.AllRoundUseful.moveCursorUp;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
@@ -24,10 +26,6 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.olalekan.naijakeyboard.KeyView;
-import com.olalekan.naijakeyboard.MyInputMethod;
-import com.olalekan.naijakeyboard.MyKeyboardView;
-import com.olalekan.naijakeyboard.R;
 import com.olalekan.naijakeyboard.defaults.Constants;
 
 import java.util.ArrayList;
@@ -522,7 +520,7 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
         mKeyViewN.setOptions(new ArrayList<>(Arrays.asList("Ñ", "ɲ", "\uD835\uDD11", "ن")));
         mKeyViewM.setOptions(new ArrayList<>(Arrays.asList("ḿ", "ṁ", "ṁ", "\uD835\uDD10", "ᴹ", "م")));
 
-        mKeyViewComma.setOptions(new ArrayList<>(Arrays.asList("?", "!")));
+        mKeyViewComma.setOptions(new ArrayList<>(Arrays.asList("?", "!", "'", "-", "/")));
     }
 
     private boolean isLetter(String s){
@@ -599,6 +597,11 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
     public void onClick(KeyView key) {
         String input = key.toString();
         clearCopiedWord();
+
+        if(!deleteAllPossibleSuggestionCountdownRunning){
+            startDeleteAllPossibleSuggestionCountdown();
+        }
+
         if(!shouldAutoCorrect){
             mOnKeyClicked.keyClicked(key, input, key.showInEditable);
             return;
@@ -1167,6 +1170,29 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
             }
         }
     };
+
+    boolean deleteAllPossibleSuggestionCountdownRunning = false;
+    private final int FIVE_MINUTES = 300000;//IN MILLI SECONDS
+    //helps delete all possible suggestions that were not added to the database every 5 minutes
+    CountDownTimer deleteAllPossibleSuggestionsToBeAdded = new CountDownTimer(FIVE_MINUTES, FIVE_MINUTES) {
+        @Override
+        public void onTick(long l) {
+
+        }
+
+        @Override
+        public void onFinish() {
+            SuggestionData.possibleSuggestionsToBeAddedHashMap = new HashMap<>();
+            Log.i("Suggestion countdown", "onFinish Count: All possible suggestions deleted");
+            deleteAllPossibleSuggestionCountdownRunning = false;
+        }
+    };
+
+    private void startDeleteAllPossibleSuggestionCountdown(){
+        Log.i("Suggestion countdown", "onStart Count: All possible suggestions countdown started");
+        deleteAllPossibleSuggestionsToBeAdded.start();
+        deleteAllPossibleSuggestionCountdownRunning = true;
+    }
 
 
 }
