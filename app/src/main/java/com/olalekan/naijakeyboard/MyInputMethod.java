@@ -284,6 +284,7 @@ public class MyInputMethod extends InputMethodService implements MyKeyboardView.
 //                inputConnection.performEditorAction(EditorInfo.IME_ACTION_GO);
 //                inputConnection.endBatchEdit();
                 inputConnection.commitText("\n", NEW_CURSOR_POSITION);
+                if(!capsLock) changeToCapitalLetters();
                 break;
 
             case "Go":
