@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:minWidth="20dp"
+                android:minWidth="@dimen/key_text_image_min_width"
                 android:text="A" />
 
             <ImageView
@@ -40,7 +40,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:minWidth="20dp"
+                android:minWidth="@dimen/key_text_image_min_width"
                 android:visibility="gone"
                 app:srcCompat="@drawable/ic_baseline_backspace_24" />
         </LinearLayout>

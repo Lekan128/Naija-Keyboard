@@ -23,7 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.olalekan.naijakeyboard.defaults.Constants;
+import com.olalekan.naijakeyboard.defaults.AllRoundUseful;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -101,7 +101,7 @@ public class EmojiRecyclerAdapter extends RecyclerView.Adapter<EmojiRecyclerAdap
                             return true;
                         case MotionEvent.ACTION_UP:
                             if(!showingOptions) {
-                                Constants.vibrateIfRequired(mContext);
+                                AllRoundUseful.vibrateIfRequired(mContext);
 //                                ((Vibrator)mContext.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(VIBRATION_TIME);
                                 mEmojiWasClicked.emojiClicked(((TextView)view).getText().toString());
                             }
@@ -254,7 +254,7 @@ public class EmojiRecyclerAdapter extends RecyclerView.Adapter<EmojiRecyclerAdap
 
 
     private void showOptions(Context context, TextView emojiText, ArrayList<String> options){
-        Constants.vibrateIfRequired(context);
+        AllRoundUseful.vibrateIfRequired(context);
 //        ((Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(VIBRATION_TIME);
 
         PopupWindow optionsPopupWindow = new PopupWindow(context);

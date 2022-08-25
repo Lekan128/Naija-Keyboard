@@ -25,6 +25,7 @@
     <color name="dark_harsh_text_colour">#656060</color>
 
     <color name="vivid_raspberry">#ff0063</color>
+    <color name="light_red">#B0D37373</color>
     <color name="button_blue">#0000FF</color>
 
 </resources>

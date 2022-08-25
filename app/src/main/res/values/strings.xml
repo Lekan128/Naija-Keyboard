@@ -2,6 +2,10 @@
     <string name="app_name">Naija Keyboard</string>
     <string name="symbols">#sym</string>
     <string name="emoji_image_description">Emoji</string>
+
+    <string name="disclaimer_preference">com.olalekan.videoapplication.DISCLAIMER_PREFERENCE</string>
+    <string name="discalimer_seen">com.olalekan.videoapplication.DISCLAIMER_SEEN</string>
+
     <string name="input_method_preference">com.olalekan.videoapplication.INPUT_METHOD_PREFERENCE</string>
     <string name="saved_input_preference">com.olalekan.videoapplication.SAVED_INPUT_PREFERENCE</string>
     <string name="colour_preference">com.olalekan.videoapplication.COLOUR_PREFERENCE</string>

@@ -13,6 +13,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 
+import com.olalekan.naijakeyboard.defaults.AllRoundUseful;
 import com.olalekan.naijakeyboard.defaults.Constants;
 
 import java.util.Set;
@@ -364,7 +365,7 @@ public class MyInputMethod extends InputMethodService implements MyKeyboardView.
             //if the first character of the word be cleared starts with a capital letter
             //change the suggestion first letter to capital
             if(Character.isUpperCase(wordBeforeCursor.charAt(0))){
-                suggestion = Constants.capitaliseFirstLetterOf(suggestion);
+                suggestion = AllRoundUseful.capitaliseFirstLetterOf(suggestion);
             }
 
         }

@@ -26,6 +26,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.olalekan.naijakeyboard.defaults.AllRoundUseful;
 import com.olalekan.naijakeyboard.defaults.Constants;
 
 import java.util.ArrayList;
@@ -500,7 +501,7 @@ public class KeyView extends FrameLayout {
     }
 
     private void vibrateIfRequired(){
-        boolean vibrate = sharedPreferences.getBoolean(getContext().getString(R.string.vibration_preference), Constants.DEFAULT_VIBRATION);
+        boolean vibrate = sharedPreferences.getBoolean(getContext().getString(R.string.vibration_preference), AllRoundUseful.DEFAULT_VIBRATION);
         if(vibrate) ((Vibrator)getContext().getSystemService(Context.VIBRATOR_SERVICE)).vibrate(VIBRATION_TIME);
     }
 

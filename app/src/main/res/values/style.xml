@@ -6,7 +6,7 @@
         <item name="previewLetterColour">@color/black</item>
         <item name="letterBackgroundColour">@color/off_white</item>
         <item name="previewBackgroundColour">	@color/off_white</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:padding">@dimen/key_view_padding</item>
         <item name="showImage">false</item>
         <item name="keyShouldRepeat">false</item>
         <item name="shouldShowPreview">true</item>

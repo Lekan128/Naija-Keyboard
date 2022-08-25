@@ -15,12 +15,14 @@ import android.widget.SeekBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
+import com.olalekan.naijakeyboard.defaults.AllRoundUseful;
 import com.olalekan.naijakeyboard.defaults.Constants;
 
 import java.util.Set;
@@ -44,7 +46,8 @@ public class PreferencesBottomSheetDialogFragment extends BottomSheetDialogFragm
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_preference_bottom_sheet_dialog, container, false);
 
-        view.setBackground(getResources().getDrawable(R.drawable.rectangle_curved_corners));
+//        view.setBackground(getResources().getDrawable(R.drawable.rectangle_curved_corners));
+        view.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.rectangle_curved_corners, null));
 
         //setup suggestion recycler view
         RecyclerView suggestionInputRecyclerView = view.findViewById(R.id.defaultSuggestionsInputRecyclerView);
@@ -76,7 +79,7 @@ public class PreferencesBottomSheetDialogFragment extends BottomSheetDialogFragm
         int seekBarProgress = (int) (keyOpacity * MAX_VALUE_OF_SEEK_BAR);
         mKeyOpacitySeekBar.setProgress(seekBarProgress);
 
-        boolean vibrate = mSharedPreferences.getBoolean(getString(R.string.vibration_preference), Constants.DEFAULT_VIBRATION);
+        boolean vibrate = mSharedPreferences.getBoolean(getString(R.string.vibration_preference), AllRoundUseful.DEFAULT_VIBRATION);
 
         mVibrationSwitch.setChecked(vibrate);
 

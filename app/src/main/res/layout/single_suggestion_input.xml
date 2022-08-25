@@ -11,17 +11,18 @@
     <TextView
         android:id="@+id/suggestionInputTextView"
         style="@style/TextViewHeadStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_weight="1"
         android:text="TextView" />
 
     <ImageView
         android:id="@+id/suggestionRemoveImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_gravity="center"
-        android:background="@drawable/ic_baseline_remove_24"
-        app:srcCompat="@drawable/ic_baseline_remove_24" />
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_baseline_remove_circle_outline_24"
+        />
 </LinearLayout>

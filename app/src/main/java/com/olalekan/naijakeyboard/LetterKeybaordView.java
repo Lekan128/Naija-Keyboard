@@ -26,6 +26,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.olalekan.naijakeyboard.defaults.AllRoundUseful;
 import com.olalekan.naijakeyboard.defaults.Constants;
 
 import java.util.ArrayList;
@@ -88,7 +89,8 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
 
     RecyclerView suggestionRecyclerView;
     private com.olalekan.naijakeyboard.SuggestionRecyclerAdapter mSuggestionRecyclerAdapter;
-    private ArrayList<String> mSuggestions = new ArrayList<>(Arrays.asList("Hey", "How are you?", "Comrade", "What's up?"));
+    private ArrayList<String> mSuggestions = new ArrayList<>(Constants.DEFAULT_SUGGESTION_SET);
+//            new ArrayList<>(Arrays.asList("Hey", "How are you?", "Comrade", "What's up?"));
     private ArrayList<String> mSuggestionCandidates;
 
     private StringBuilder wordClosestToCursor = new StringBuilder();
@@ -300,7 +302,7 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
         mSuggestionRecyclerAdapter.setRecyclerViewClickedListener(new com.olalekan.naijakeyboard.SuggestionRecyclerAdapter.RecyclerViewClicked() {
             @Override
             public void recyclerViewClicked(String suggestion) {
-                Constants.vibrateIfRequired(getContext());
+                AllRoundUseful.vibrateIfRequired(getContext());
                 if(!mCopiedWord.isEmpty()){
                     //if a word has been copied
                     /*
@@ -350,6 +352,9 @@ public class LetterKeybaordView extends LinearLayout implements KeyView.KeyWasCl
 
     public void setDefaultSuggestions(Set<String> suggestions){
         mSuggestions = new ArrayList<String>(suggestions);
+        if(mSuggestionRecyclerAdapter != null){
+            mSuggestionRecyclerAdapter.changeSuggestions(mSuggestions);
+        }
     }
 
     private void changeToDefaultSuggestions(){

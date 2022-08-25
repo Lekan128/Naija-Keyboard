@@ -8,4 +8,7 @@
     <dimen name="viewCornerRadius">30dp</dimen>
     <dimen name="emoji_size">25dp</dimen>
 
+    <dimen name="key_text_image_min_width">15dp</dimen>
+    <dimen name="key_view_padding">3dp</dimen>
+
 </resources>

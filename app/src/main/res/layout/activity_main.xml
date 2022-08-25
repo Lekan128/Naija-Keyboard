@@ -8,6 +8,14 @@
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:id="@+id/switchPreferenceImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_baseline_settings_24"/>
+
     <Button
         android:id="@+id/setupKeyboardButton"
         android:layout_width="wrap_content"
