@@ -50,12 +50,17 @@ public class MainActivity extends AppCompatActivity {
         mSetUpKeyboardButton.setOnClickListener(view->startActivity(new Intent(MainActivity.this, com.olalekan.naijakeyboard.SetupActivity.class)));
 
 
-        findViewById(R.id.testImageView).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                com.olalekan.naijakeyboard.TestBottomSheetDialogFragment testBottomSheetDialogFragment = new com.olalekan.naijakeyboard.TestBottomSheetDialogFragment();
-                testBottomSheetDialogFragment.show(getSupportFragmentManager(), Constants.TEST_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG);
-            }
+//        findViewById(R.id.testImageView).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                com.olalekan.naijakeyboard.TestBottomSheetDialogFragment testBottomSheetDialogFragment = new com.olalekan.naijakeyboard.TestBottomSheetDialogFragment();
+//                testBottomSheetDialogFragment.show(getSupportFragmentManager(), Constants.TEST_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG);
+//            }
+//        });
+        //Lambda:
+        findViewById(R.id.testImageView).setOnClickListener(view -> {
+            com.olalekan.naijakeyboard.TestBottomSheetDialogFragment testBottomSheetDialogFragment = new com.olalekan.naijakeyboard.TestBottomSheetDialogFragment();
+            testBottomSheetDialogFragment.show(getSupportFragmentManager(), Constants.TEST_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG);
         });
 
         //animation
@@ -109,10 +114,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    };
   //rewritten as a lombda expression
-    private final View.OnClickListener preferenceOnClick = view ->{
-        com.olalekan.naijakeyboard.PreferencesBottomSheetDialogFragment preferencesBottomSheetDialogFragment = new com.olalekan.naijakeyboard.PreferencesBottomSheetDialogFragment();
-        preferencesBottomSheetDialogFragment.show(getSupportFragmentManager(), Constants.PREFERENCE_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG);
-    };
+    private final View.OnClickListener preferenceOnClick = view ->showPreferences();
 
     @Override
     protected void onResume() {
